@@ -20,6 +20,8 @@ export type SiteConfig = {
     twitterZh?: string
     discord?: string
     email?: string
+    linkedin?: string
+    facebook?: string
   }
   creator: string
   themeColors?: string | ThemeColor[]

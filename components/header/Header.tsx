@@ -14,7 +14,7 @@ const Header = () => {
     <header className="py-2 px-6 backdrop-blur-md sticky top-0 z-50">
       <nav className="flex justify-between items-center w-full mx-auto">
         <div className="flex items-center space-x-6 md:space-x-12">
-          <I18nLink
+          {/* <I18nLink
             href="/"
             prefetch={false}
             className="flex items-center space-x-1 font-bold"
@@ -29,7 +29,7 @@ const Header = () => {
             <span className="text-gray-800 dark:text-gray-200">
               {t("title")}
             </span>
-          </I18nLink>
+          </I18nLink> */}
           <HeaderLinks />
         </div>
 

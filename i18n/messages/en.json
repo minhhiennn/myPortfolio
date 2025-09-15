@@ -59,8 +59,8 @@
           "title": "Open Source",
           "links": [
             {
-              "href": "https://github.com/weijunext/nextjs-15-starter",
-              "name": "Next Forge",
+              "href": "https://github.com/minhhiennn",
+              "name": "Hien Nguyen",
               "rel": "noopener noreferrer nofollow",
               "target": "_blank"
             },
@@ -113,7 +113,8 @@
       "subscribe": "Subscribe",
       "subscribing": "Subscribing...",
       "subscribed": "Subscription successful! Thank you for your attention."
-    }
+    },
+    "MadeWithLove": "Made with ❤️ by Hien Nguyen"
   },
   "Home": {
     "title": "Next Forge",

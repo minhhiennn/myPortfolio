@@ -5,11 +5,10 @@ export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://nextforge.d
 export const SOURCE_CODE_URL = "https://github.com/weijunext/nextjs-15-starter";
 export const PRO_VERSION = "https://nexty.dev";
 
-const TWITTER_URL = 'https://x.com/weijunext'
-const BSKY_URL = 'https://bsky.app/profile/judewei.bsky.social'
-const EMAIL_URL = 'mailto:weijunext@gmail.com'
-const GITHUB_URL = 'https://github.com/weijunext'
-const DISCORD_URL = process.env.NEXT_PUBLIC_DISCORD_INVITE_URL
+const EMAIL_URL = 'minhhien2000k@gmail.com'
+const GITHUB_URL = 'https://github.com/minhhiennn'
+const LINKEDIN_URL = 'https://www.linkedin.com/in/hien-minh-062443265/'
+const FACEBOOK_URL = 'https://www.facebook.com/minh.hien.687325'
 
 export const siteConfig: SiteConfig = {
   name: "Next Forge",
@@ -25,10 +24,9 @@ export const siteConfig: SiteConfig = {
   ],
   creator: '@weijunext',
   socialLinks: {
-    discord: DISCORD_URL,
-    twitter: TWITTER_URL,
+    linkedin: LINKEDIN_URL,
+    facebook: FACEBOOK_URL,
     github: GITHUB_URL,
-    bluesky: BSKY_URL,
     email: EMAIL_URL
   },
   themeColors: [

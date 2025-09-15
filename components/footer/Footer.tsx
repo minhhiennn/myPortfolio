@@ -1,13 +1,10 @@
-import BuiltWithButton from "@/components/BuiltWithButton";
-import { Newsletter } from "@/components/footer/Newsletter";
-import { TwitterX } from "@/components/social-icons/icons";
 import { siteConfig } from "@/config/site";
 import { Link as I18nLink } from "@/i18n/routing";
 import { FooterLink } from "@/types/common";
 import { GithubIcon, MailIcon } from "lucide-react";
 import { getMessages, getTranslations } from "next-intl/server";
 import Link from "next/link";
-import { SiBluesky, SiDiscord } from "react-icons/si";
+import { SiFacebook, SiLinkedin } from "react-icons/si";
 
 export default async function Footer() {
   const messages = await getMessages();
@@ -27,133 +24,65 @@ export default async function Footer() {
     <div className="bg-gray-900 text-gray-300">
       <footer className="py-2 border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 py-12 lg:grid-cols-6">
-            <div className="w-full flex flex-col sm:flex-row lg:flex-col gap-4 col-span-full md:col-span-2">
-              <div className="space-y-4 flex-1">
-                <div className="items-center space-x-2 flex">
-                  <h2 className="highlight-text text-2xl font-bold">
-                    {t("title")}
-                  </h2>
-                </div>
-
-                <p className="text-sm p4-4 md:pr-12">{t("tagLine")}</p>
-
-                <div className="flex items-center gap-2">
-                  {siteConfig.socialLinks?.github && (
-                    <Link
-                      href={siteConfig.socialLinks.github}
-                      prefetch={false}
-                      target="_blank"
-                      rel="noreferrer nofollow noopener"
-                      aria-label="GitHub"
-                      title="View on GitHub"
-                      className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
-                    >
-                      <GithubIcon className="size-4" aria-hidden="true" />
-                    </Link>
-                  )}
-                  {siteConfig.socialLinks?.discord && (
-                    <Link
-                      href={siteConfig.socialLinks.discord}
-                      prefetch={false}
-                      target="_blank"
-                      rel="noreferrer nofollow noopener"
-                      aria-label="Discord"
-                      title="Join Discord"
-                      className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
-                    >
-                      <SiDiscord className="w-4 h-4" aria-hidden="true" />
-                    </Link>
-                  )}
-                  {siteConfig.socialLinks?.twitter && (
-                    <Link
-                      href={siteConfig.socialLinks.twitter}
-                      prefetch={false}
-                      target="_blank"
-                      rel="noreferrer nofollow noopener"
-                      aria-label="Twitter"
-                      title="View on Twitter"
-                      className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
-                    >
-                      <TwitterX className="w-4 h-4" aria-hidden="true" />
-                    </Link>
-                  )}
-                  {siteConfig.socialLinks?.bluesky && (
-                    <Link
-                      href={siteConfig.socialLinks.bluesky}
-                      prefetch={false}
-                      target="_blank"
-                      rel="noreferrer nofollow noopener"
-                      aria-label="Blue Sky"
-                      title="View on Bluesky"
-                      className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
-                    >
-                      <SiBluesky className="w-4 h-4" aria-hidden="true" />
-                    </Link>
-                  )}
-                  {siteConfig.socialLinks?.email && (
-                    <Link
-                      href={`mailto:${siteConfig.socialLinks.email}`}
-                      prefetch={false}
-                      target="_blank"
-                      rel="noreferrer nofollow noopener"
-                      aria-label="Email"
-                      title="Email"
-                      className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
-                    >
-                      <MailIcon className="w-4 h-4" />
-                    </Link>
-                  )}
-                </div>
-
-                <BuiltWithButton />
+          <div className="py-8">
+            <div className="w-full text-center">
+              <p>{tFooter("MadeWithLove")}</p>
+              <div className="flex justify-center items-center gap-2 pt-4">
+                {siteConfig.socialLinks?.github && (
+                  <Link
+                    href={siteConfig.socialLinks.github}
+                    prefetch={false}
+                    target="_blank"
+                    rel="noreferrer nofollow noopener"
+                    aria-label="GitHub"
+                    title="View on GitHub"
+                    className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
+                  >
+                    <GithubIcon className="size-4" aria-hidden="true" />
+                  </Link>
+                )}
+                {siteConfig.socialLinks?.facebook && (
+                  <Link
+                    href={siteConfig.socialLinks.facebook}
+                    prefetch={false}
+                    target="_blank"
+                    rel="noreferrer nofollow noopener"
+                    aria-label="Discord"
+                    title="Join Discord"
+                    className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
+                  >
+                    <SiFacebook className="w-4 h-4" aria-hidden="true" />
+                  </Link>
+                )}
+                {siteConfig.socialLinks?.linkedin && (
+                  <Link
+                    href={siteConfig.socialLinks.linkedin}
+                    prefetch={false}
+                    target="_blank"
+                    rel="noreferrer nofollow noopener"
+                    aria-label="Twitter"
+                    title="View on Twitter"
+                    className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
+                  >
+                    <SiLinkedin className="w-4 h-4" aria-hidden="true" />
+                  </Link>
+                )}
+                {siteConfig.socialLinks?.email && (
+                  <Link
+                    href={`mailto:${siteConfig.socialLinks.email}`}
+                    prefetch={false}
+                    target="_blank"
+                    rel="noreferrer nofollow noopener"
+                    aria-label="Email"
+                    title="Email"
+                    className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
+                  >
+                    <MailIcon className="w-4 h-4" />
+                  </Link>
+                )}
               </div>
             </div>
-
-            {footerLinks.map((section) => (
-              <div key={section.title} className="flex-1">
-                <h3 className="text-white text-lg font-semibold mb-4">
-                  {section.title}
-                </h3>
-                <ul className="space-y-2 text-sm">
-                  {section.links.map((link) => (
-                    <li key={link.href}>
-                      {link.href.startsWith("/") && !link.useA ? (
-                        <I18nLink
-                          href={link.href}
-                          title={link.name}
-                          prefetch={false}
-                          className="hover:text-white transition-colors"
-                          target={link.target || ""}
-                          rel={link.rel || ""}
-                        >
-                          {link.name}
-                        </I18nLink>
-                      ) : (
-                        <Link
-                          href={link.href}
-                          title={link.name}
-                          prefetch={false}
-                          className="hover:text-white transition-colors"
-                          target={link.target || ""}
-                          rel={link.rel || ""}
-                        >
-                          {link.name}
-                        </Link>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-
-            {messages.Footer.Newsletter && (
-              <div className="w-full flex-1">
-                <Newsletter />
-              </div>
-            )}
           </div>
-
           <div className="border-t border-gray-800 py-6 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               {tFooter("Copyright", {
