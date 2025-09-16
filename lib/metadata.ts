@@ -1,21 +1,21 @@
-import { siteConfig } from '@/config/site'
-import { DEFAULT_LOCALE, LOCALE_NAMES, Locale } from '@/i18n/routing'
-import { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
+import { siteConfig } from "@/config/site";
+import { DEFAULT_LOCALE, LOCALE_NAMES, Locale } from "@/i18n/routing";
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
 type MetadataProps = {
-  page?: string
-  title?: string
-  description?: string
-  images?: string[]
-  noIndex?: boolean
-  locale: Locale
-  path?: string
-  canonicalUrl?: string
-}
+  page?: string;
+  title?: string;
+  description?: string;
+  images?: string[];
+  noIndex?: boolean;
+  locale: Locale;
+  path?: string;
+  canonicalUrl?: string;
+};
 
 export async function constructMetadata({
-  page = 'Home',
+  page = "Home",
   title,
   description,
   images = [],
@@ -25,40 +25,44 @@ export async function constructMetadata({
   canonicalUrl,
 }: MetadataProps): Promise<Metadata> {
   // get translations
-  const t = await getTranslations({ locale, namespace: 'Home' })
+  const t = await getTranslations({ locale, namespace: "Home" });
 
   // get page specific metadata translations
-  const pageTitle = title || t(`title`)
-  const pageDescription = description || t(`description`)
+  const pageTitle = title || t(`title`);
+  const pageDescription = description || t(`description`);
 
   // build full title
-  const finalTitle = page === 'Home'
-    ? `${pageTitle} - ${t('tagLine')}`
-    : `${pageTitle} | ${t('title')}`
+  const finalTitle = `${pageTitle}`;
 
   // build image URLs
-  const imageUrls = images.length > 0
-    ? images.map(img => ({
-      url: img.startsWith('http') ? img : `${siteConfig.url}/${img}`,
-      alt: pageTitle,
-    }))
-    : [{
-      url: `${siteConfig.url}/og.png`,
-      alt: pageTitle,
-    }]
+  const imageUrls =
+    images.length > 0
+      ? images.map((img) => ({
+          url: img.startsWith("http") ? img : `${siteConfig.url}/${img}`,
+          alt: pageTitle,
+        }))
+      : [
+          {
+            url: `${siteConfig.url}/og.png`,
+            alt: pageTitle,
+          },
+        ];
 
   // Open Graph Site
-  const pageURL = `${locale === DEFAULT_LOCALE ? '' : `/${locale}`}${path}` || siteConfig.url
+  const pageURL =
+    `${locale === DEFAULT_LOCALE ? "" : `/${locale}`}${path}` || siteConfig.url;
 
   // build alternate language links
   const alternateLanguages = Object.keys(LOCALE_NAMES).reduce((acc, lang) => {
     const path = canonicalUrl
-      ? `${lang === DEFAULT_LOCALE ? '' : `/${lang}`}${canonicalUrl === '/' ? '' : canonicalUrl}`
-      : `${lang === DEFAULT_LOCALE ? '' : `/${lang}`}`
-    acc[lang] = `${siteConfig.url}${path}`
+      ? `${lang === DEFAULT_LOCALE ? "" : `/${lang}`}${
+          canonicalUrl === "/" ? "" : canonicalUrl
+        }`
+      : `${lang === DEFAULT_LOCALE ? "" : `/${lang}`}`;
+    acc[lang] = `${siteConfig.url}${path}`;
 
-    return acc
-  }, {} as Record<string, string>)
+    return acc;
+  }, {} as Record<string, string>);
 
   return {
     title: finalTitle,
@@ -68,23 +72,27 @@ export async function constructMetadata({
     creator: siteConfig.creator,
     metadataBase: new URL(siteConfig.url),
     alternates: {
-      canonical: canonicalUrl ? `${siteConfig.url}${locale === DEFAULT_LOCALE ? '' : `/${locale}`}${canonicalUrl === '/' ? '' : canonicalUrl}` : undefined,
+      canonical: canonicalUrl
+        ? `${siteConfig.url}${locale === DEFAULT_LOCALE ? "" : `/${locale}`}${
+            canonicalUrl === "/" ? "" : canonicalUrl
+          }`
+        : undefined,
       languages: alternateLanguages,
     },
     openGraph: {
-      type: 'website',
+      type: "website",
       title: finalTitle,
       description: pageDescription,
       url: pageURL,
-      siteName: t('title'),
+      siteName: t("title"),
       locale: locale,
       images: imageUrls,
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: finalTitle,
       description: pageDescription,
-      site: `${siteConfig.url}${pageURL === '/' ? '' : pageURL}`,
+      site: `${siteConfig.url}${pageURL === "/" ? "" : pageURL}`,
       images: imageUrls,
       creator: siteConfig.creator,
     },
@@ -96,5 +104,5 @@ export async function constructMetadata({
         follow: !noIndex,
       },
     },
-  }
+  };
 }

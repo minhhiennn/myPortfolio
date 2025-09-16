@@ -14,18 +14,6 @@
       {
         "name": "关于",
         "href": "/about"
-      },
-      {
-        "name": "源码",
-        "href": "https://github.com/weijunext/nextjs-15-starter",
-        "target": "_blank",
-        "rel": "noopener noreferrer nofollow"
-      },
-      {
-        "name": "高级版",
-        "href": "https://nexty.dev",
-        "target": "_blank",
-        "rel": "noopener noreferrer"
       }
     ]
   },
@@ -117,8 +105,7 @@
     "MadeWithLove": "Made with ❤️ by Hien Nguyen"
   },
   "Home": {
-    "title": "Next Forge",
-    "tagLine": "Next.js 多语言启动模板",
+    "title": "Portfolio - Home Page",
     "description": "内置多语言支持的 Next.js 15 启动模板，助您快速构建面向全球的出海网站。简洁高效，开箱即用，完全优化的SEO基础架构。",
     "whoIsUsing": "谁在使用此模板"
   },
@@ -128,7 +115,15 @@
   },
   "About": {
     "title": "关于",
-    "description": "关于网站"
+    "description": "关于网站",
+    "skillSection": {
+      "title": "What I do",
+      "subTitle": "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+      "skills": [
+        "⚡ Develop highly interactive Front end / User Interfaces for your web applications",
+        "⚡ Integration of third party services such as AWS / Docker"
+      ]
+    }
   },
   "TermsOfService": {
     "title": "服务条款",
@@ -137,5 +132,13 @@
   "PrivacyPolicy": {
     "title": "隐私政策",
     "description": "隐私政策"
+  },
+  "Greeting": {
+    "username": "Minh Hiển",
+    "title": "Hi all, I'm Minh Hiển",
+    "subTitle": "A passionate Full Stack Software Developer 🚀 having an experience of building Web applications with Reactj / Nextjs and some other cool libraries and frameworks.",
+    "welcome": "to my portfolio",
+    "resumeLink": "https://drive.google.com/uc?export=download&id=1jjhgrwOlpnfdUL6_EoMOxCZaf1y2NQn5",
+    "displayGreeting": true
   }
 }

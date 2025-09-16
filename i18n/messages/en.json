@@ -14,18 +14,6 @@
       {
         "name": "About",
         "href": "/about"
-      },
-      {
-        "name": "Source Code",
-        "href": "https://github.com/weijunext/nextjs-15-starter",
-        "target": "_blank",
-        "rel": "noopener noreferrer nofollow"
-      },
-      {
-        "name": "Pro Version",
-        "href": "https://nexty.dev",
-        "target": "_blank",
-        "rel": "noopener noreferrer"
       }
     ]
   },
@@ -117,8 +105,7 @@
     "MadeWithLove": "Made with ❤️ by Hien Nguyen"
   },
   "Home": {
-    "title": "Next Forge",
-    "tagLine": "Multilingual Next.js 15 Starter",
+    "title": "Portfolio - Home page",
     "description": "A multilingual Next.js 15 starter with built-in i18n support. Launch your global-ready web application with a clean, efficient, and SEO-friendly foundation.",
     "whoIsUsing": "Who is Using This Starter"
   },
@@ -127,8 +114,16 @@
     "description": "A list of blog posts"
   },
   "About": {
-    "title": "About",
-    "description": "About the site"
+    "title": "About Me",
+    "description": "About the site",
+    "skillSection": {
+      "title": "What I do",
+      "subTitle": "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+      "skills": [
+        "⚡ Develop highly interactive Front end / User Interfaces for your web applications",
+        "⚡ Integration of third party services such as AWS / Docker"
+      ]
+    }
   },
   "TermsOfService": {
     "title": "Terms of Service",
@@ -137,5 +132,13 @@
   "PrivacyPolicy": {
     "title": "Privacy Policy",
     "description": "Privacy Policy"
+  },
+  "Greeting": {
+    "username": "Minh Hiển",
+    "title": "Hi all, I'm Minh Hiển",
+    "subTitle": "A passionate Full Stack Software Developer 🚀 having an experience of building Web applications with Reactjs / Nextjs and some other cool libraries and frameworks.",
+    "welcome": "to my portfolio",
+    "resumeLink": "https://drive.google.com/uc?export=download&id=1jjhgrwOlpnfdUL6_EoMOxCZaf1y2NQn5",
+    "displayGreeting": true
   }
 }

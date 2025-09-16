@@ -1,12 +1,13 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { greeting } from "@/stores/portfolio";
+import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import emoji from "react-easy-emoji";
 
 export default function GreetingDetails() {
   const { theme } = useTheme();
+  const greeting = useTranslations("Greeting");
 
   return (
     <div className="w-full">
@@ -18,13 +19,13 @@ export default function GreetingDetails() {
           )}
         >
           {" "}
-          {greeting.title}{" "}
+          {greeting("title")}{" "}
           <span className="inline-block animate-wave [transform-origin:70%_70%]">
             {emoji("👋")}
           </span>
         </h1>
         <p className={cn("text-[30px] leading-10 text-[#868e96] font-[350]")}>
-          {greeting.subTitle}
+          {greeting("subTitle")}
         </p>
 
         <p className={cn("my-[40px] text-[30px] leading-10 text-[#868e96]")}>
@@ -48,7 +49,7 @@ export default function GreetingDetails() {
             e
           </span>
 
-          <span className="ml-2">{greeting.welcome}</span>
+          <span className="ml-2">{greeting("welcome")}</span>
         </p>
       </div>
     </div>
