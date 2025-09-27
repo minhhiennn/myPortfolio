@@ -8,12 +8,16 @@
   "Header": {
     "links": [
       {
-        "name": "ブログ",
-        "href": "/blog"
+        "name": "Home",
+        "href": "/"
       },
       {
         "name": "サイトについて",
         "href": "/about"
+      },
+      {
+        "name": "Experiences",
+        "href": "/experiences"
       }
     ]
   },
@@ -140,5 +144,9 @@
     "welcome": "to my portfolio",
     "resumeLink": "https://drive.google.com/uc?export=download&id=1jjhgrwOlpnfdUL6_EoMOxCZaf1y2NQn5",
     "displayGreeting": true
+  },
+  "Experience": {
+    "title": "Experiences",
+    "description": "A list of experiences"
   }
 }

@@ -55,7 +55,7 @@ export default function AboutDetails() {
                 <p
                   key={i}
                   className={cn(
-                    "my-2 text-[16px] text-[#868e96]",
+                    "my-2 text-[19px] text-[#868e96]",
                     theme === "dark" ? "text-white" : ""
                   )}
                 >
