@@ -36,13 +36,8 @@
               "useA": true
             },
             {
-              "href": "/zh",
-              "name": "中文",
-              "useA": true
-            },
-            {
-              "href": "/ja",
-              "name": "日本語",
+              "href": "/vi",
+              "name": "Tiếng Việt",
               "useA": true
             }
           ]
@@ -148,5 +143,16 @@
   "Experience": {
     "title": "Experiences",
     "description": "A list of experiences"
+  },
+  "ProjectList": {
+    "title": "Projects Completed",
+    "status": {
+      "completed": "Completed",
+      "ongoing": "Ongoing",
+      "paused": "Paused"
+    },
+    "present": "Present",
+    "contributions": "Main Contributions:",
+    "technologies": "Technologies Used:"
   }
 }

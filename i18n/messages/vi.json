@@ -1,0 +1,158 @@
+{
+  "LanguageDetection": {
+    "title": "Gợi ý ngôn ngữ",
+    "description": "Chúng tôi nhận thấy ngôn ngữ trình duyệt của bạn khác với ngôn ngữ hiện tại của trang web. Bạn có thể chuyển đổi ngôn ngữ bất cứ lúc nào.",
+    "countdown": "Đóng sau {countdown} giây",
+    "switchTo": "Chuyển sang"
+  },
+  "Header": {
+    "links": [
+      {
+        "name": "Trang chủ",
+        "href": "/"
+      },
+      {
+        "name": "Về tôi",
+        "href": "/about"
+      },
+      {
+        "name": "Kinh nghiệm",
+        "href": "/experiences"
+      }
+    ]
+  },
+  "Footer": {
+    "Copyright": "Bản quyền © {year} {name} Mọi quyền được bảo lưu.",
+    "PrivacyPolicy": "Chính sách bảo mật",
+    "TermsOfService": "Điều khoản dịch vụ",
+    "Links": {
+      "groups": [
+        {
+          "title": "Ngôn ngữ",
+          "links": [
+            {
+              "href": "/en",
+              "name": "English",
+              "useA": true
+            },
+            {
+              "href": "/vi",
+              "name": "Tiếng Việt",
+              "useA": true
+            }
+          ]
+        },
+        {
+          "title": "Mã nguồn mở",
+          "links": [
+            {
+              "href": "https://github.com/minhhiennn",
+              "name": "Hien Nguyen",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            },
+            {
+              "href": "https://github.com/weijunext/landing-page-boilerplate",
+              "name": "Landing Page Boilerplate",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            },
+            {
+              "href": "https://github.com/weijunext/weekly-boilerplate",
+              "name": "Blog Boilerplate",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "title": "Sản phẩm khác",
+          "links": [
+            {
+              "href": "https://nexty.dev/",
+              "name": "Nexty - SaaS Template",
+              "rel": "noopener noreferrer",
+              "target": "_blank"
+            },
+            {
+              "href": "https://ogimage.click/",
+              "name": "OG Image Generator",
+              "rel": "noopener noreferrer",
+              "target": "_blank"
+            },
+            {
+              "href": "https://ntab.dev/",
+              "name": "nTab",
+              "rel": "noopener noreferrer",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
+    "Newsletter": {
+      "title": "Đăng ký nhận tin của chúng tôi",
+      "description": "Nhận tin tức và cập nhật mới nhất từ Next Forge",
+      "defaultErrorMessage": "Vui lòng nhập địa chỉ email hợp lệ",
+      "successMessage": "Đăng ký thành công",
+      "errorMessage": "Đăng ký thất bại",
+      "errorMessage2": "Đăng ký thất bại. Vui lòng thử lại sau.",
+      "subscribe": "Đăng ký",
+      "subscribing": "Đang đăng ký...",
+      "subscribed": "Đăng ký thành công! Cảm ơn sự quan tâm của bạn."
+    },
+    "MadeWithLove": "Được tạo với ❤️ bởi Hien Nguyen"
+  },
+  "Home": {
+    "title": "Portfolio - Trang chủ",
+    "description": "Bản khởi động Next.js 15 đa ngôn ngữ với hỗ trợ i18n tích hợp. Khởi chạy ứng dụng web toàn cầu của bạn với nền tảng sạch, hiệu quả và thân thiện với SEO.",
+    "whoIsUsing": "Ai đang sử dụng bản khởi tạo này"
+  },
+  "Blog": {
+    "title": "Bài viết blog",
+    "description": "Danh sách các bài viết blog"
+  },
+  "About": {
+    "title": "Về tôi",
+    "description": "Về trang web",
+    "skillSection": {
+      "title": "Công việc của tôi",
+      "subTitle": "LẬP TRÌNH VIÊN FULL STACK ĐIÊN RỒ MUỐN KHÁM PHÁ MỌI TECH STACK",
+      "skills": [
+        "⚡ Phát triển Front end / User Interfaces tương tác cao cho ứng dụng web của bạn",
+        "⚡ Tích hợp các dịch vụ bên thứ ba như AWS / Docker"
+      ]
+    }
+  },
+  "TermsOfService": {
+    "title": "Điều khoản dịch vụ",
+    "description": "Điều khoản dịch vụ"
+  },
+  "PrivacyPolicy": {
+    "title": "Chính sách bảo mật",
+    "description": "Chính sách bảo mật"
+  },
+  "Greeting": {
+    "username": "Minh Hiển",
+    "title": "Chào tất cả, tôi là Minh Hiển",
+    "subTitle": "Một Full Stack Software Developer đam mê 🚀 có kinh nghiệm xây dựng ứng dụng web với Reactjs / Nextjs và một số thư viện và framework thú vị khác.",
+    "welcome": "đến portfolio của tôi",
+    "resumeLink": "https://drive.google.com/uc?export=download&id=1jjhgrwOlpnfdUL6_EoMOxCZaf1y2NQn5",
+    "displayGreeting": true
+  },
+  "Experience": {
+    "title": "Kinh nghiệm",
+    "description": "Danh sách kinh nghiệm"
+  },
+  "ProjectList": {
+    "title": "Dự án đã thực hiện",
+    "status": {
+      "completed": "Hoàn thành",
+      "ongoing": "Đang thực hiện",
+      "paused": "Tạm dừng"
+    },
+    "present": "Hiện tại",
+    "contributions": "Đóng góp chính:",
+    "technologies": "Công nghệ sử dụng:"
+  }
+}

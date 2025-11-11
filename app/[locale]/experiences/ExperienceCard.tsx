@@ -11,7 +11,7 @@ export function ExperienceCard({
 }) {
   return (
     <I18nLink
-      href={`/experience/${experience.slug}`}
+      href={`/experiences${experience.slug}`}
       prefetch={false}
       className="bg-transparent rounded-lg hover:underline"
     >

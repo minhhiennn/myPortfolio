@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "web-search-prime": {
+      "type": "sse",
+      "url": "https://api.z.ai/api/mcp/web_search_prime/sse?Authorization=70622771da0640bc8553eb90f70d6c95.0G7ePwcNQCVFFrxVN",
+      "timeout": 30000
+    },
+    "zai-mcp-server": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@z_ai/mcp-server"],
+      "env": {
+        "Z_AI_API_KEY": "70622771da0640bc8553eb90f70d6c95.0G7ePwcNQCVFFrxVN",
+        "Z_AI_MODE": "ZAI",
+        "NODE_OPTIONS": "--max-old-space-size=4096"
+      },
+      "timeout": 60000,
+      "restartDelay": 2000
+    }
+  }
+}
