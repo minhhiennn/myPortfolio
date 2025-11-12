@@ -6,6 +6,8 @@ export interface Project {
   contributions: string[];
   technologies?: string[];
   status?: "completed" | "ongoing" | "paused";
+  demoUrl?: string;
+  githubUrl?: string;
 }
 
 export type ExperiencesPost = {

@@ -152,6 +152,9 @@
       "paused": "Paused"
     },
     "present": "Present",
+    "links": "Links:",
+    "viewDemo": "View Demo",
+    "viewCode": "View Code",
     "contributions": "Main Contributions:",
     "technologies": "Technologies Used:"
   }
