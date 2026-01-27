@@ -39,16 +39,10 @@ export default function ProjectList({ projects }: ProjectListProps) {
   };
 
   const formatDate = (dateString: string) => {
-    try {
-      const date = new Date(dateString);
-      return date.toLocaleDateString("vi-VN", {
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric",
-      });
-    } catch {
-      return dateString;
-    }
+    const date = new Date(dateString);
+    if (isNaN(date.getTime())) return dateString;
+
+    return `${String(date.getMonth() + 1).padStart(2, "0")}/${date.getFullYear()}`;
   };
 
   return (
