@@ -1,3 +1,5 @@
+"use client";
+
 import GreetingDetails from "@/components/home/GreetingDetails";
 import GreetingImage from "@/components/home/GreetingImage";
 import { Fade } from "react-awesome-reveal";
