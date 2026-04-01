@@ -17,7 +17,7 @@ export default function AboutDetails() {
   return (
     <div className="flex flex-row justify-between items-start gap-3">
       <Fade direction="left" duration={1000}>
-        <div className="w-[100%] h-auto">
+        <div className="hidden lg:block w-[100%] h-auto">
           <Image alt="Man Working" src={MainWorking} />
         </div>
       </Fade>
@@ -56,7 +56,7 @@ export default function AboutDetails() {
                   key={i}
                   className={cn(
                     "my-2 text-[19px] text-[#868e96]",
-                    theme === "dark" ? "text-white" : ""
+                    theme === "dark" ? "text-white" : "",
                   )}
                 >
                   {skill}
